@@ -1,0 +1,19 @@
+class Solution {
+  public:
+    void reverse(string& s, int l, int r){
+      if(l>=r) return;
+      swap(s[l], s[r]);
+      reverse(s, l+1, r-1);
+      
+  }
+    string reverseString(string& s) {
+        // code here
+        //recursive approach
+        reverse(s, 0, s.size() - 1);
+        return s;
+    }
+};
+
+
+
+// Complexity of the code is O(n)
